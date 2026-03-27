@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cneifgpf7x0sg"]
+
+[ext_resource type="Script" uid="uid://bauoprtwq3gig" path="res://scripts/GameManager.cs" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c51clfetpfkj1" path="res://scenes/region.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=976963168]
+
+[node name="GameManager" type="Node" parent="." unique_id=1310454889]
+script = ExtResource("1_0wfyh")
+
+[node name="Map" type="Node2D" parent="GameManager" unique_id=1473946622]
+
+[node name="Region" parent="GameManager/Map" unique_id=2073862620 groups=["regions"] instance=ExtResource("1_o5qli")]
+
+[node name="Region2" parent="GameManager/Map" unique_id=64046843 groups=["regions"] instance=ExtResource("1_o5qli")]
+position = Vector2(120, 0)
+
+[node name="Region3" parent="GameManager/Map" unique_id=851259320 groups=["regions"] instance=ExtResource("1_o5qli")]
+position = Vector2(240, 0)
+
+[node name="Region4" parent="GameManager/Map" unique_id=227991945 groups=["regions"] instance=ExtResource("1_o5qli")]
+position = Vector2(240, 120)
+
+[node name="Region5" parent="GameManager/Map" unique_id=94879279 groups=["regions"] instance=ExtResource("1_o5qli")]
+position = Vector2(120, 120)
+
+[node name="Region6" parent="GameManager/Map" unique_id=681325543 groups=["regions"] instance=ExtResource("1_o5qli")]
+position = Vector2(0, 120)
+
+[node name="UI" type="CanvasLayer" parent="GameManager" unique_id=1169911969]
+
+[node name="TurnLabel" type="Label" parent="GameManager/UI" unique_id=2144996008]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
